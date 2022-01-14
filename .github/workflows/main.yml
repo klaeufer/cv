@@ -1,0 +1,41 @@
+# Action was shamelessly copied from here: https://stackoverflow.com/a/64311970
+name: Deploy CV
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    tags:
+      - v*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Working directory check
+        run: |
+          pwd
+          ls
+      - name: Collate Bibliography
+        run: |
+          pushd bibs >& /dev/null
+          bash gather.sh
+          popd >& /dev/null
+          cat bibliography/*.bib > laufer-cv.bib
+      - name: Build LaTeX Document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: laufer-cv.tex
+      - name: Check for Resulting PDF and Collated Bibliography
+        run: |
+          ls laufer-cv.{pdf,bib}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            laufer-cv.bib
+            laufer-cv.pdf
