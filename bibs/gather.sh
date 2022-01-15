@@ -16,6 +16,7 @@ for bibtype in books inproceedings journal magazine misc patents techreport thes
   done
 done
 
+cat $DEST/*.bib > $DEST/allpubs.bib
 
 # Can probably let the CI system put all of these files together...
 #> $DEST/gkt-all.bib
