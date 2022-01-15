@@ -1,9 +1,17 @@
 dist/
 build/
 bibliography/
+scholarly-bibliometrics.tex
 
-*.pdf
+*.aux 
+*.b?? 
 *.docx
+*.fls 
+*.fdb_latexmk
+*.log 
+*.out 
+*.pdf 
+*.run.xml 
 *.swp
+*.synctex.gz 
 .DS_Store
-
