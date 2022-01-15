@@ -24,7 +24,7 @@ jobs:
           pushd bibs >& /dev/null
           bash gather.sh
           popd >& /dev/null
-          cp bibliography/allpubs.bib > laufer-cv.bib
+          cp bibliography/allpubs.bib laufer-cv.bib
       - name: Build LaTeX Document
         uses: xu-cheng/latex-action@v2
         with:
