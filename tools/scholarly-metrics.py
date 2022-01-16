@@ -2,7 +2,7 @@
 
 
 BIBLIOMETRICS_TEX = """
-\section*{Bibliometrics}
+\subsection{Bibliometrics}
 
 \cvline{Citations}{%(citedby)s on \href{%(scholar_url)s}{Google Scholar}}
 \cvline{h-index}{%(hindex)s}
