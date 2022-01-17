@@ -33,7 +33,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: python3 -m pip install scholarly
+        run: python3 -m pip install -r requirements.txt
       - name: Working directory check
         run: |
           pwd
@@ -45,6 +45,7 @@ jobs:
           popd >& /dev/null
           cp bibliography/allpubs.bib laufer-cv.bib
           python3 ./tools/scholarly-metrics.py --name "Konstantin Läufer"
+          python3 ./tools/github-commits.py  --first-year 2018 --last-year 2021 --username klaeufer
       - name: Build LaTeX Document
         uses: xu-cheng/latex-action@v2
         with:
