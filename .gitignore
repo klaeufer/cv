@@ -2,6 +2,7 @@ dist/
 build/
 bibliography/
 scholarly-bibliometrics.tex
+github-contributions.tex
 
 *.aux 
 *.b?? 
