@@ -5,7 +5,9 @@ scholarly-bibliometrics.tex
 github-contributions.tex
 
 *.aux 
-*.b?? 
+*.bbl
+*.bcf
+*.blg
 *.docx
 *.fls 
 *.fdb_latexmk
