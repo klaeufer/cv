@@ -4,4 +4,4 @@
 
 This is my CV in LaTeX based on the [moderncv](https://ctan.org/pkg/moderncv) class following [gkthiruvathukal's example](https://github.com/gkthiruvathukal/cv).
 
-You can view/download the latest version [here](https://github.com/klaeufer/cv/releases/latest/download/laufer-cv.pdf)
+You can view/download the latest version [here](https://github.com/klaeufer/cv/releases/latest/download/laufer-cv.pdf).
