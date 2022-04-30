@@ -6,7 +6,7 @@ import argparse
 
 from functools import reduce
 
-CVLINE='\cvline{GitHub}{%(commits)s contributions from %(first_year)s-%(last_year)s at \href{https://github.com/%(username)s}{github.com/klaeufer}}\n'
+CVLINE='\cvline{GitHub}{%(commits)s contributions from %(first_year)s-%(last_year)s at \href{https://github.com/%(username)s}{klaeufer}}\n'
 
 def get_argparse():
     parser = argparse.ArgumentParser()
