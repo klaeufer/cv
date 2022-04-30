@@ -2,8 +2,6 @@
 
 
 BIBLIOMETRICS_TEX = """
-\subsection{Bibliometrics}
-
 \cvline{Citations}{%(citedby)s on \href{%(scholar_url)s}{Google Scholar}}
 \cvline{h-index}{%(hindex)s}
 \cvline{i10-index}{%(i10index)s}
