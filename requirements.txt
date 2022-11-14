@@ -1,3 +1,4 @@
 scholarly
 requests
 beautifulsoup4
+academic
