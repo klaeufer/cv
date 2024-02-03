@@ -20,7 +20,11 @@ sleep 5
 
 echo "Obtaining Google Scholar Data"
 python3 tools/scholarly-metrics.py --name "Konstantin Läufer"
-python3 tools/github-commits.py  --first-year 2019 --last-year 2023 --username klaeufer --modern-cv
+datecmd=$(which gdate)
+[ -x "$datecmd" ] || datecmd=$(which date)
+first_year=$($datecmd --date="5 years ago" +%Y)
+last_year=$($datecmd --date="1 year ago" +%Y)
+python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username klaeufer --modern-cv
 sleep 5
 
 latexmk -output-directory="./build" -C -pdf ${MAIN}.tex
