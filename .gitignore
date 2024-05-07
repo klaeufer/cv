@@ -16,7 +16,7 @@ github-contributions.tex
 *.pdf 
 *.run.xml 
 *.swp
-*.synctex.gz 
+*.synctex*
 .DS_Store
 Pipfile*
 .venv/
