@@ -2,9 +2,9 @@
 
 
 BIBLIOMETRICS_TEX = """
-\cvline{Citations}{%(citedby)s on \href{%(scholar_url)s}{Google Scholar}}
-\cvline{h-index}{%(hindex)s}
-\cvline{i10-index}{%(i10index)s}
+\\cvline{Citations}{%(citedby)s on \\href{%(scholar_url)s}{Google Scholar}}
+\\cvline{h-index}{%(hindex)s}
+\\cvline{i10-index}{%(i10index)s}
 """
 
 SCHOLAR_URL="https://scholar.google.com/citations?hl=en\\&user=%(scholar_id)s"

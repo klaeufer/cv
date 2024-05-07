@@ -8,7 +8,7 @@ import locale
 
 from functools import reduce
 
-CVLINE='\cvline{GitHub}{%(commits)s contributions during %(first_year)s--%(last_year)s at \href{https://github.com/%(username)s}{klaeufer}}\n'
+CVLINE='\\cvline{GitHub}{%(commits)s contributions during %(first_year)s--%(last_year)s at \\href{https://github.com/%(username)s}{klaeufer}}\n'
 
 def get_argparse():
     parser = argparse.ArgumentParser()
