@@ -8,6 +8,21 @@
         SCHOOL             = {New York University},
         TITLE              = {Polymorphic Type Inference and Abstract 
                               Data Types},
-        YEAR               = {1992}, bibtex_show=1}
+        YEAR               = {1992},
+	ABSTRACT           = {
+Many statically-typed programming languages provide an abstract data type construct, such as the package in Ada, the cluster in CLU, and the module in Modula2. However, in most of these languages, instances of abstract data types are not first-class values. Thus they cannot be assigned to a variable, passed as a function parameter, or returned as a function result.
 
+The higher-order functional language ML has a strong and static type system with parametric polymorphism. In addition, ML provides type reconstruction and consequently does not require type declarations for identifiers. Although the ML module system supports abstract data types, their instances cannot be used as first-class values for type-theoretic reasons.
+
+In this dissertation, we describe a family of extensions of ML. While retaining ML’s static type discipline, type reconstruction, and most of its syntax, we add significant expressive power to the language by incorporating first-class abstract types as an extension of ML’s free algebraic datatypes. In particular, we are now able to express multiple implementations of a given abstract type; heterogeneous aggregates of different implementations of the same abstract type; and dynamic dispatching of operations with respect to the implementation type.
+
+Following Mitchell and Plotkin, we formalize abstract types in terms of existentially quantified types. We prove that our type system is semantically sound with respect to a standard denotational semantics.
+
+We then present an extension of Haskell, a non-strict functional language that uses type classes to capture systematic overloading. This language results from incorporating existentially quantified types into Haskell and gives us first-class abstract types with type classes as their interfaces. We can now express heterogeneous structures over type classes. The language is statically typed and offers comparable flexibility to object-oriented languages. Its semantics is defined through a type-preserving translation to a modified version of our ML extension.
+
+We have implemented a prototype of an interpreter for our language, including the type reconstruction algorithm, in Standard ML.	
+	},
+	pdf = {phdthesis.pdf},
+	bibtex_show=1
+}
 
