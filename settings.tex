@@ -56,3 +56,27 @@
     {\ifitemannotation{graduate}
       {\textit{#1}}
       {#1}}}
+
+% Macros for highlighting bibitems in a particular area
+% https://tex.stackexchange.com/a/149753
+%
+% In the document, add desired items to the category:
+%
+% \addtocategory{education}{cite2}
+
+\newcommand{\markedu}{\textbf{[edu]}}
+
+\usepackage{xspace}
+\usepackage[svgnames]{xcolor}
+\DeclareBibliographyCategory{education}
+% the colour definition
+\colorlet{eduentry}{Maroon}% let 'impentry' = Maroon
+
+% Inform biblatex that all books in the 'important' category deserve
+% special treatment, while all others do not
+\AtEveryBibitem{%
+  \ifcategory{education}%
+%    {\color{eduentry}}%
+    {\markedu\xspace}%
+    {}%
+  }
