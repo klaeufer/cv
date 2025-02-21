@@ -64,7 +64,7 @@
 %
 % \addtocategory{education}{cite2}
 
-\newcommand{\markedu}{\textbf{[edu]}}
+\newcommand{\markedu}{\textbf{*}}
 
 \usepackage{xspace}
 \usepackage[svgnames]{xcolor}
@@ -77,6 +77,7 @@
 \AtEveryBibitem{%
   \ifcategory{education}%
 %    {\color{eduentry}}%
+%    {\markedu\xspace}%
     {\markedu\xspace}%
     {}%
   }
