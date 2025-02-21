@@ -1,12 +1,6 @@
 #!/bin/bash
 
-if [ -d ~/.linuxbrew ]; then
-  PATH=/usr/bin:$PATH
-fi
-
-NAME=laufer
-MAIN=${NAME}-cv
-DOMAIN=${NAME}.cs.luc.edu
+source ./build-settings.sh
 
 # Each of my BibTeX entries is kept in a separate file and assembled into one (for each type of publication).
 # Makes it easier to keep up-to-date.
@@ -18,15 +12,18 @@ bash gather.sh
 popd >& /dev/null
 sleep 5
 
-echo "Obtaining Google Scholar Data"
-python3 tools/scholarly-metrics.py --name "Konstantin Läufer"
+echo "Obtaining Google Scholar data"
+python3 tools/scholarly-metrics.py --name "$FULLNAME" > /dev/null
+
+echo "Obtaining GitHub contribution data"
 datecmd=$(which gdate)
 [ -x "$datecmd" ] || datecmd=$(which date)
 first_year=$($datecmd --date="5 years ago" +%Y)
 last_year=$($datecmd --date="1 year ago" +%Y)
-python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username klaeufer --modern-cv
+python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv
 sleep 5
 
+echo "Building LaTeX document"
 latexmk -output-directory="./build" -C -pdf ${MAIN}.tex
 latexmk -output-directory="./build" -pdf ${MAIN}.tex
 
