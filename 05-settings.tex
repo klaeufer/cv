@@ -41,21 +41,25 @@
 % In each bib item, indicate authors to highlight:
 %
 % author = {Doe, John and Smith, Alice and Brown, Bob},
-% author+an = {2=graduate;3=undergrad},
+% author+an = {2=graduate;3=undergrad;5=myself},
 
 \renewcommand*{\mkbibnamegiven}[1]{%
   \ifitemannotation{undergrad}
     {\textbf{#1}}
     {\ifitemannotation{graduate}
-      {\textit{#1}}
-      {#1}}}
+      {{#1}}
+      {\ifitemannotation{myself}
+        {\textit{#1}}
+        {#1}}}}
 
 \renewcommand*{\mkbibnamefamily}[1]{%
   \ifitemannotation{undergrad}
     {\textbf{#1}}
     {\ifitemannotation{graduate}
-      {\textit{#1}}
-      {#1}}}
+      {{#1}$^*$}
+      {\ifitemannotation{myself}
+        {\textit{#1}}
+        {#1}}}}
 
 % Macros for highlighting bibitems in a particular area
 % https://tex.stackexchange.com/a/149753
@@ -78,6 +82,6 @@
   \ifcategory{education}%
 %    {\color{eduentry}}%
 %    {\markedu\xspace}%
-    {\markedu\xspace}%
+    {\markedu\,}%
     {}%
   }
