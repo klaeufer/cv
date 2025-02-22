@@ -5,7 +5,7 @@ if [ -d ~/.linuxbrew ]; then
 fi
 
 NAME=laufer
-MAIN=${NAME}-cv
+MAIN=cv-main
 FULLNAME="Konstantin Läufer"
 GITHUB_USER=klaeufer
 DOMAIN=${GITHUB_USER}.github.io
