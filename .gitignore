@@ -1,8 +1,7 @@
 dist/
 build/
 bibliography/
-scholarly-bibliometrics.tex
-github-contributions.tex
+99-*
 
 *.aux 
 *.bbl
