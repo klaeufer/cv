@@ -14,7 +14,7 @@ for u in $(cut -d/ -f 5-6 $ZOTERO_BIB_URLS) ; do
   GROUP_ID="${u%/*}"
   OUTPUT_FILE="$BIB_DIR/${u#*/}.bib"
 
-  curl -L "$ZOTERO_API/groups/$GROUP_ID/items/top?format=biblatex" -o "$OUTPUT_FILE"
+  curl -L "$ZOTERO_API/groups/$GROUP_ID/items/top?format=biblatex&limit=100" -o "$OUTPUT_FILE"
 
   echo "BibLaTeX file downloaded: $OUTPUT_FILE"
 
