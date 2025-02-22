@@ -6,11 +6,8 @@ source ./build-settings.sh
 # Makes it easier to keep up-to-date.
 # Every entry in the .bib MUST have a year to sort properly. (We don't rigidly sort by other fields, month, day, since these don't always appear).
 
-echo "Collating bibliography"
-pushd bibs >& /dev/null
-bash gather.sh
-popd >& /dev/null
-sleep 5
+echo "Fetching bibliography from Zotero"
+tools/get-zotero-bibtex.sh
 
 echo "Obtaining Google Scholar data"
 python3 tools/scholarly-metrics.py --name "$FULLNAME" > /dev/null
