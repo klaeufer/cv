@@ -1,31 +1,21 @@
-% Konstantin Läufer's CV
-% Version v0.8
-
-% TODO insert version number automatically
-
-%\documentclass[10pt,usletter,sans,draft]{moderncv} 
 \documentclass[10pt,letterpaper,sans]{moderncv} 
 
-% See if this will fix the font scaling problem
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
+\input{settings}
 
-\input{05-settings}
-\input{08-personaldata}
+\input{./data/08-personaldata.tex}
 
 \begin{document}
 
 \makecvtitle
 
-\input{10-appointments}
-\input{15-industry}
-\input{20-education}
-\input{25-recognition}
-\input{30-funding}
-\input{40-publications}
-%\input{45-media}
-\input{50-teaching}
-\input{60-service}
-\input{70-personal}
+\input{./data/10-appointments.tex}
+\input{./data/15-industry.tex}
+\input{./data/20-education.tex}
+\input{./data/25-recognition.tex}
+\input{./data/30-funding.tex}
+\input{./data/40-publications.tex}
+\input{./data/50-teaching.tex}
+\input{./data/60-service.tex}
+\input{./data/70-personal.tex}
 
 \end{document}

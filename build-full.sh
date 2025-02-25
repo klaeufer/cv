@@ -6,6 +6,9 @@ source ./build-settings.sh
 # Makes it easier to keep up-to-date.
 # Every entry in the .bib MUST have a year to sort properly. (We don't rigidly sort by other fields, month, day, since these don't always appear).
 
+echo "Generating main LaTeX source"
+tools/generate-main-tex.sh
+
 echo "Fetching bibliography from Zotero"
 tools/get-zotero-bibtex.sh
 
