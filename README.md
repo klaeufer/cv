@@ -4,7 +4,7 @@
 
 This is my CV in LaTeX based on the [moderncv](https://ctan.org/pkg/moderncv) class following [gkthiruvathukal's example](https://github.com/gkthiruvathukal/cv).
 
-You can view/download the latest version [here](https://github.com/klaeufer/cv/releases/latest/download/laufer-cv.pdf).
+You can view/download the latest version [here](https://github.com/klaeufer/cv/releases/latest/download/klaeufer.pdf).
 
 All personal information is in LaTeX sources in the `./data` subdirectory, from which the main LaTeX source gets generated automatically:
 
