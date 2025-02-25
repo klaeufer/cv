@@ -2,8 +2,9 @@ dist/
 build/
 bibliography/
 99-*
+cv-main.tex
 
-*.aux 
+*.aux
 *.bbl
 *.bcf
 *.blg
@@ -16,7 +17,9 @@ bibliography/
 *.run.xml 
 *.swp
 *.synctex*
-.DS_Store
+*.BAK
+
 Pipfile*
 .venv/
-*.BAK
+
+.DS_Store
