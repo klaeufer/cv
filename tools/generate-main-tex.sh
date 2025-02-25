@@ -6,6 +6,9 @@ DATA_DIR=./data
 [[ -f $MAIN_TEX ]] && mv $MAIN_TEX $MAIN_TEX.BAK
 
 cat >> $MAIN_TEX <<EOF
+% DO NOT EDIT - automatically generated!
+% Edit individual sections in ./data instead.
+
 \documentclass[10pt,letterpaper,sans]{moderncv} 
 
 \input{settings}
