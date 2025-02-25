@@ -4,7 +4,7 @@
 
 
 BIB_DIR=bibliography
-ZOTERO_BIB_URLS=zotero-bibs.txt
+ZOTERO_BIB_URLS=data/zotero-bibs.txt
 ZOTERO_API=https://api.zotero.org
 
 mkdir -p bibliography
