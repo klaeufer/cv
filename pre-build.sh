@@ -3,7 +3,7 @@
 source ./build-settings.sh
 
 echo "Generating main LaTeX source"
-tools/generate-main-tex.sh
+tools/instantiate-cv-template.py
 
 echo "Fetching bibliography from Zotero"
 tools/get-zotero-bibtex.sh
