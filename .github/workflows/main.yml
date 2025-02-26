@@ -45,6 +45,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv-main.tex
+          texlive_version: 2023
       - name: Check for Resulting PDF and Collated Bibliography
         run: |
           mv cv-main.pdf ${{ github.repository_owner }}.pdf
