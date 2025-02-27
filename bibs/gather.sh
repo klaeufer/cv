@@ -9,7 +9,7 @@ fi
 
 for bibtype in books inproceedings journal magazine misc patents techreport theses incollection; do
   echo "Processing $bibtype"
-  BIBFILE=$DEST/${bibtype}.bib
+  BIBFILE=$DEST/laufer-${bibtype}.bib
   > $BIBFILE
   for entry in $(ls -r ${bibtype}/*.bib); do
     cat "$entry" >> $BIBFILE
