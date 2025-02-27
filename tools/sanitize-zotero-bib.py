@@ -3,7 +3,6 @@
 import argparse
 import bibtexparser
 from bibtexparser.bparser import BibTexParser
-from bibtexparser.customization import homogenize_latex_encoding
 import re
 
 def expand_tex_fields(entry):
