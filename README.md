@@ -40,7 +40,7 @@ This makes it easy to use `\nocite` to pull in all references in the desired cat
 ```LaTeX
 \begin{refsection}[bibliography/laufer-inproceedings.bib]
 \nocite{*}
-\printbibliography[heading=Refereed Conference Papers,sorting=ynt]
+\printbibliography[heading=subbibintoc,title={Refereed Conference Papers},sorting=ynt]
 \end{refsection}
 ```
 
