@@ -15,6 +15,7 @@ do
     mv "$bibfile" "$bibfile_raw" 
     tools/sanitize-zotero-bib.py "$bibfile_raw" "$bibfile"
 done
+rm -f bibliography/*-raw.bib
 
 echo "Obtaining Google Scholar data"
 python3 tools/scholarly-metrics.py --name "$FULLNAME" > /dev/null

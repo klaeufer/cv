@@ -43,7 +43,6 @@ def process_bibtex_file(input_bib, output_bib):
     with open(input_bib, 'r', encoding='utf-8') as bib_file:
         parser = BibTexParser(common_strings=True)
         parser.ignore_nonstandard_types = False
-        #parser.customization = homogenize_latex_encoding  # Normalize LaTeX encoding
         bib_database = bibtexparser.load(bib_file, parser)
 
     # Expand tex.* fields for each entry
