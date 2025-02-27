@@ -8,6 +8,14 @@ tools/instantiate-cv-template.py
 echo "Fetching bibliography from Zotero"
 tools/get-zotero-bibtex.sh
 
+echo "Sanitizing downloaded bib files"
+for bibfile in bibliography/*.bib
+do
+    bibfile_raw=${bibfile%.bib}-raw.bib
+    mv "$bibfile" "$bibfile_raw" 
+    tools/sanitize-zotero-bib.py "$bibfile_raw" "$bibfile"
+done
+
 echo "Obtaining Google Scholar data"
 python3 tools/scholarly-metrics.py --name "$FULLNAME" > /dev/null
 
