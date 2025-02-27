@@ -10,9 +10,11 @@ echo "Building LaTeX document"
 latexmk -output-directory="./build" -C -pdf ${MAIN}.tex
 latexmk -output-directory="./build" -pdf ${MAIN}.tex
 
-if [ -f build/${MAIN}.pdf ]; then
-  if [ -d ../${DOMAIN} ]; then
-     cat bibliography/*.bib > ../${DOMAIN}/_bibliography/papers.bib
-     echo "Copied latest bibliography to website folder"
-  fi 
-fi
+
+# TODO keep disabled until we figure out how to store custom fields in Zotero
+# if [ -f build/${MAIN}.pdf ]; then
+#   if [ -d ../${DOMAIN} ]; then
+#      cat bibliography/*.bib > ../${DOMAIN}/_bibliography/papers.bib
+#      echo "Copied latest bibliography to website folder"
+#   fi 
+# fi
