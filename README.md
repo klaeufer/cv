@@ -8,7 +8,7 @@ You can view/download the latest version [here](https://github.com/klaeufer/cv/r
 
 ## Document structure
 
-All personal CV content is in LaTeX sources in the [./data](../../tree/main/data) subdirectory, from which the main LaTeX source gets generated automatically:
+All personal CV content is in LaTeX sources in the [data](../../tree/main/data) subdirectory, from which the main LaTeX source gets generated automatically:
 
 - Files named `0[0-9]-*.tex` become part of the document *preamble*.
 - Files named `[1-9][0-9]-*.tex` constitute the document *body*.
