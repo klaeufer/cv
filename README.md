@@ -24,7 +24,7 @@ All personal CV content is in LaTeX sources in the [data](../../tree/main/data) 
 
 We use [Zotero](https://www.zotero.org/) as the single source of truth (SSoT) for our bibliographic data.
 
-In addition, we use the [Better BibTeX](https://retorque.re/zotero-better-bibtex/) (BBT) plugin for Zotero to retain custom BibTeX fields required for additional functionality, such as
+In addition, we use the [Better BibTeX](https://retorque.re/zotero-better-bibtex/) (BBT) plugin for Zotero to retain custom BibTeX fields required for additional functionality (within the Zotero `Extra` field), such as
 
 - annotation of authors, e.g., students or self, using `author+an`
 - tags used by jekyll-scholar, e.g., `bibtex_show`, `abbr`, and `selected`
