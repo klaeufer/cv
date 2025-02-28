@@ -29,10 +29,10 @@ In addition, we use the [Better BibTeX](https://retorque.re/zotero-better-bibtex
 - annotation of authors, e.g., students or self, using `author+an`
 - tags used by jekyll-scholar, e.g., `bibtex_show`, `abbr`, and `selected`
 
-Each category of bibliographic references should be a separate Zotero collection, e.g.,
+Each category of bibliographic references should be a separate Zotero group, e.g.,
 
-- laufer-inproceedings
-- laufer-techreport
+- [laufer-inproceedings](https://www.zotero.org/groups/5882358/laufer-incollection)
+- [laufer-techreport](https://www.zotero.org/groups/5882364/laufer-techreport)
 - ...
 
 This makes it easy to use `\nocite` to pull in all references in the desired category, e.g.,
