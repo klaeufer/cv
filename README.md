@@ -8,12 +8,12 @@ You can view/download the latest version [here](https://github.com/klaeufer/cv/r
 
 ## Document structure
 
-All personal CV content is in LaTeX sources in the `./data` subdirectory, from which the main LaTeX source gets generated automatically:
+All personal CV content is in LaTeX sources in the [./data](../../tree/main/data) subdirectory, from which the main LaTeX source gets generated automatically:
 
 - Files named `0[0-9]-*.tex` become part of the document *preamble*.
 - Files named `[1-9][0-9]-*.tex` constitute the document *body*.
 - The files `99-github-contributions.tex` and `99-scholarly-bibliometrics.tex` are generated automatically and can be included in a section of the document body.
-- `data/personal-settings.sh` contains these settings:
+- [data/personal-settings.sh](../../tree/main/data/personal-settings.sh) contains these settings:
 
   - `FULLNAME` for the Google Scholar data
   - `GITHUB_USER` for the activity stats
