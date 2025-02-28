@@ -46,4 +46,4 @@ This makes it easy to use `\nocite` to pull in all references in the desired cat
 
 Before the in
 
-- We fetch the bibliography data from the Zotero group URLs in `zotero-bibs.txt`.
+- We fetch the bibliography data from the Zotero group URLs in [zotero-bibs.txt](../../tree/main/data/zotero-bibs.txt).
