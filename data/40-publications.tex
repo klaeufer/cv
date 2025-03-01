@@ -11,12 +11,6 @@
 % TODO work in progress
 % TODO software
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-
 \section{Publications}
 
 \setlength\bibitemsep{1.5\itemsep}
@@ -30,18 +24,8 @@
 \cvline{Student Engagement in Research}{Loyola undergraduates are \textbf{boldfaced}; graduate students are marked with an asterisk$^*$.}
 
 
-%\subsection{Books}
-%\begin{refsection}[bibliography/books.bib]
-%\nocite{*}
-%\printbibliography[heading=none,sorting=ynt]
-%\end{refsection}
-
-%\subsection{Dissertation}
-%\begin{refsection}[bibliography/theses.bib]
-%\nocite{*}
-%\printbibliography[heading=none,sorting=ynt]
-%\end{refsection}
-
+% Put education-related papers in a cross-cutting category 
+% so they can be highlighted regardless of subsection
 \addtocategory{education}{
   Laufer_IEEEComputer_2024,
   Laufer_FIE_2024,
@@ -61,6 +45,10 @@
   Laufer_MCC_1997,
 }
 
+%\begin{refsection}[bibliography/laufer-books.bib]
+%\nocite{*}
+%\printbibliography[heading=subbibintoc,title={Books},sorting=ynt]
+%\end{refsection}
 
 \begin{refsection}[bibliography/laufer-patents.bib]
 \nocite{*}
@@ -89,24 +77,15 @@
 
 \begin{refsection}[bibliography/laufer-techreport.bib]
 \nocite{*}
-\printbibliography[heading=subbibintoc,title={Technical Reports},sorting=ynt]
+\printbibliography[heading=subbibintoc,title={Preprints and Technical Reports},sorting=ynt]
 \end{refsection}
 
 \begin{refsection}[bibliography/laufer-misc.bib]
 \nocite{*}
-\printbibliography[heading=subbibintoc,title={Posters, Presentations, Workshops, and Miscellaneous},sorting=ynt]
+\printbibliography[heading=subbibintoc,title={Posters, Presentations, Tutorials, Workshops, and Miscellaneous},sorting=ynt]
 \end{refsection}
 
-
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-%-----       letter       ---------------------------------------------------------
+%\begin{refsection}[bibliography/theses.bib]
+%\nocite{*}
+%\printbibliography[heading=subbibintoc,title={Theses},sorting=ynt]
+%\end{refsection}

@@ -83,7 +83,5 @@
 % special treatment, while all others do not
 \AtEveryBibitem{%
   \iffieldundef{eprint}{}{\clearfield{url}}%
-  \ifcategory{education}%
-    {\markedu\,}%
-    {}%
-  }
+  \ifcategory{education}{\markedu\,}{}%
+}
