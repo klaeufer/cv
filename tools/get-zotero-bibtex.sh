@@ -16,8 +16,8 @@ for u in $(cut -d/ -f 5-6 $ZOTERO_BIB_URLS) ; do
 
   # To ensure correct export of TechReport and PhDThesis entries, 
   # use format=bibtex, NOT biblatex
-  curl -L "$ZOTERO_API/groups/$GROUP_ID/items?format=bibtex&limit=100" -o "$OUTPUT_FILE"
+  curl -L "$ZOTERO_API/groups/$GROUP_ID/items?format=biblatex&limit=100" -o "$OUTPUT_FILE"
 
-  echo "BibTeX file downloaded: $OUTPUT_FILE"
+  echo "BibLaTeX file downloaded: $OUTPUT_FILE"
 
 done
