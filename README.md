@@ -29,7 +29,7 @@ In addition, we use the [Better BibTeX](https://retorque.re/zotero-better-bibtex
 - annotation of authors, e.g., students or self, using `author+an`
 - tags used by jekyll-scholar, e.g., `bibtex_show`, `abbr`, and `selected`
 
-Each category of bibliographic references should be a separate Zotero group, e.g.,
+If desired, each category of bibliographic references can be a separate Zotero group, e.g.,
 
 - [laufer-inproceedings](https://www.zotero.org/groups/5882358/laufer-incollection)
 - [laufer-techreport](https://www.zotero.org/groups/5882364/laufer-techreport)
