@@ -1,3 +1,3 @@
-FULLNAME="Konstantin Läufer"
 GITHUB_USER=klaeufer
+GSCHOLAR_PROFILE=Rs0f_nMAAAAJ
 DOMAIN=${GITHUB_USER}.github.io

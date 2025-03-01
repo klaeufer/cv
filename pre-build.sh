@@ -18,7 +18,7 @@ done
 rm -f bibliography/*-raw.bib
 
 echo "Obtaining Google Scholar data"
-python3 tools/scholarly-metrics.py --name "$FULLNAME" > /dev/null
+python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" > /dev/null
 
 echo "Obtaining GitHub contribution data"
 datecmd=$(which gdate)
