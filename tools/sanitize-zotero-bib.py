@@ -11,10 +11,13 @@ def expand_tex_fields(entry):
     Only replaces `\\_` with `_` in keys but leaves other characters like `+` untouched.
     """
     if 'note' in entry:
+        note_entry = entry['note']
+        del entry['note']
+
         new_fields = {}
         new_note_lines = []
         
-        for line in entry['note'].splitlines():
+        for line in note_entry.splitlines():
             tex_match = re.match(r"tex\.([\w\+\_\\]+):\s*(.*)", line)  # Allow underscores, plus, and letters
             if tex_match:
                 key, value = tex_match.groups()
@@ -29,9 +32,7 @@ def expand_tex_fields(entry):
 
         # Retain the modified note field (excluding extracted tex.* fields)
         if new_note_lines:
-            entry['note'] = "\n".join(new_note_lines)
-        else:
-            del entry['note']
+            entry['extra'] = "\n".join(new_note_lines)
 
     return entry
 
