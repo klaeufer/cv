@@ -9,7 +9,7 @@ ZOTERO_API=https://api.zotero.org
 
 mkdir -p $BIB_DIR
 
-for u in $(cut -d/ -f 5-6 $ZOTERO_BIB_URLS) ; do
+for u in $(cut -d/ -f 5-6 "$ZOTERO_BIB_URLS") ; do
 
   GROUP_ID="${u%/*}"
   OUTPUT_FILE="$BIB_DIR/${u#*/}.bib"

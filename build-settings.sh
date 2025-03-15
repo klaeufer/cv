@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ -d ~/.linuxbrew ]; then
+if [[ -d "$HOME/.linuxbrew" ]]; then
   PATH=/usr/bin:$PATH
 fi
 
-[[ -d .venv ]] && source .venv/bin/activate
+[[ -d ".venv" ]] && source .venv/bin/activate
 
 MAIN=cv-main
 
