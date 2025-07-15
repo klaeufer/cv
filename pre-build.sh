@@ -22,6 +22,8 @@ done
 if [[ -n "${GSCHOLAR_PROFILE}" && ! -f "$OUTPUT_GSCHOLAR" ]]; then
     echo "Obtaining Google Scholar data for $GSCHOLAR_PROFILE"
     python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" > /dev/null
+else
+    echo "WARNING: reusing existing $OUTPUT_GSCHOLAR, delete to update on next build"
 fi
 
 touch $OUTPUT_GSCHOLAR
@@ -33,6 +35,8 @@ if [[ -n "${GITHUB_USER}" && ! -f "$OUTPUT_GITHUB" ]]; then
     first_year=$($datecmd --date="5 years ago" +%Y)
     last_year=$($datecmd --date="1 year ago" +%Y)
     python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv
+else
+    echo "WARNING: reusing existing $OUTPUT_GITHUB, delete to update on next build"
 fi
 
 touch $OUTPUT_GITHUB
