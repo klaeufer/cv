@@ -10,13 +10,14 @@ BIBLIOMETRICS_TEX = """
 SCHOLAR_URL="https://scholar.google.com/citations?hl=en\\&user=%(scholar_id)s"
 
 import argparse
+import os
 
 def get_argparse():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--profile', help="Google Scholar profile ID", required=True)
     parser.add_argument(
-        '--output', help="output filename", default="99-scholarly-bibliometrics.tex", required=False)
+        '--output', help="output filename", default=os.environ["OUTPUT_GSCHOLAR"], required=False)
     return parser
 
 from scholarly import scholarly
@@ -40,10 +41,3 @@ bibliographic_vars = {
 
 with open(args.output, "w") as out_file:
    out_file.write(BIBLIOMETRICS_TEX % bibliographic_vars)
-
-
-
-
-
-
-

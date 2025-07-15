@@ -1,7 +1,6 @@
 dist/
 build/
 bibliography/
-99-*
 cv-main.tex
 
 *.aux

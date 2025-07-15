@@ -5,6 +5,7 @@ import requests
 import argparse
 import re
 import locale
+import os
 
 from functools import reduce
 
@@ -48,7 +49,7 @@ def get_argparse():
     parser.add_argument(
         '--output',
         help="output filename",
-        default="99-github-contributions.tex",
+        default=os.environ["OUTPUT_GITHUB"],
         required=False)
     return parser
 

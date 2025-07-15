@@ -2,6 +2,9 @@
 
 source ./build-settings.sh
 
+export OUTPUT_GSCHOLAR=99-scholarly-bibliometrics.tex
+export OUTPUT_GITHUB=99-github-contributions.tex
+
 echo "Generating main LaTeX source"
 tools/instantiate-cv-template.py
 
@@ -16,14 +19,14 @@ do
     tools/sanitize-zotero-bib.py "$bibfile_raw" "$bibfile"
 done
 
-if [[ -n "${GSCHOLAR_PROFILE}" ]]; then
+if [[ -n "${GSCHOLAR_PROFILE}" && ! -f "$OUTPUT_GSCHOLAR" ]]; then
     echo "Obtaining Google Scholar data for $GSCHOLAR_PROFILE"
     python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" > /dev/null
 fi
 
-touch 99-scholarly-bibliometrics.tex
+touch $OUTPUT_GSCHOLAR
 
-if [[ -n "${GITHUB_USER}" ]]; then
+if [[ -n "${GITHUB_USER}" && ! -f "$OUTPUT_GITHUB" ]]; then
     echo "Obtaining GitHub contribution data for $GITHUB_USER"
     datecmd=$(which gdate)
     [[ -x "$datecmd" ]] || datecmd=$(which date)
@@ -32,4 +35,4 @@ if [[ -n "${GITHUB_USER}" ]]; then
     python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv
 fi
 
-touch 99-github-contributions.tex
+touch $OUTPUT_GITHUB
