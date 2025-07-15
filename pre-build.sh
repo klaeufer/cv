@@ -17,15 +17,19 @@ do
 done
 
 if [[ -n "${GSCHOLAR_PROFILE}" ]]; then
-    echo "Obtaining Google Scholar data"
+    echo "Obtaining Google Scholar data for $GSCHOLAR_PROFILE"
     python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" > /dev/null
 fi
 
+touch 99-scholarly-bibliometrics.tex
+
 if [[ -n "${GITHUB_USER}" ]]; then
-    echo "Obtaining GitHub contribution data"
+    echo "Obtaining GitHub contribution data for $GITHUB_USER"
     datecmd=$(which gdate)
     [[ -x "$datecmd" ]] || datecmd=$(which date)
     first_year=$($datecmd --date="5 years ago" +%Y)
     last_year=$($datecmd --date="1 year ago" +%Y)
     python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv
 fi
+
+touch 99-github-contributions.tex
