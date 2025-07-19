@@ -49,7 +49,7 @@ def get_argparse():
     parser.add_argument(
         '--output',
         help="output filename",
-        default=os.environ["OUTPUT_GITHUB"],
+        default="99-github-contributions.tex",
         required=False)
     return parser
 

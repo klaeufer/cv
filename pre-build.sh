@@ -21,7 +21,7 @@ done
 
 if [[ -n "${GSCHOLAR_PROFILE}" && ! -f "$OUTPUT_GSCHOLAR" ]]; then
     echo "Obtaining Google Scholar data for $GSCHOLAR_PROFILE"
-    python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" > /dev/null
+    python3 tools/scholarly-metrics.py --profile "$GSCHOLAR_PROFILE" --output "$OUTPUT_GSCHOLAR"
 else
     echo "WARNING: reusing existing $OUTPUT_GSCHOLAR, run ./distclean.sh to update on next build"
 fi
@@ -34,7 +34,7 @@ if [[ -n "${GITHUB_USER}" && ! -f "$OUTPUT_GITHUB" ]]; then
     [[ -x "$datecmd" ]] || datecmd=$(which date)
     first_year=$($datecmd --date="5 years ago" +%Y)
     last_year=$($datecmd --date="1 year ago" +%Y)
-    python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv
+    python3 tools/github-commits.py  --first-year $first_year --last-year $last_year --username $GITHUB_USER --modern-cv --output "$OUTPUT_GITHUB"
 else
     echo "WARNING: reusing existing $OUTPUT_GITHUB, run ./distclean.sh to update on next build"
 fi

@@ -18,7 +18,7 @@ def get_argparse():
     parser.add_argument(
     '--profile', help="Google Scholar profile ID", required=True)
     parser.add_argument(
-    '--output', help="output filename", default=os.environ["OUTPUT_GSCHOLAR"], required=False)
+    '--output', help="output filename", default="99-scholarly-bibliometrics.tex", required=False)
     return parser
 
 parser = get_argparse()
